@@ -1,8 +1,7 @@
-FROM php:5.5-apache
+FROM dimonpvt/php5.5.9
 
-RUN apt-get update && apt-get install -y libmemcached-dev \
-    php5-mysql
+RUN apt-get update && apt-get install -y php5-memcache
 
-COPY . /var/www/html/
+COPY . /var/www/
 
 EXPOSE 80
